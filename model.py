@@ -8,4 +8,12 @@ y = np.array([150,200,250,300,350])
 model = LinearRegression()
 model.fit(x,y)
 
-y_prod = model.predict(x)
+y_pred = model.predict(x)
+
+plt.scatter(x, y, color='blue', label='Actual')
+plt.plot(x, y_pred, color='red', label='Predicted')
+plt.xlabel('Size of the house (sq ft)')
+plt.ylabel('Prise of the house ($)')
+plt.title('Linear Regression Model')
+plt.legend()
+plt.show()
